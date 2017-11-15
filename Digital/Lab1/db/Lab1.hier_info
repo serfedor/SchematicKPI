@@ -1,0 +1,85 @@
+|Lab1
+C <= <GND>
+HEX0[0] <= DEC_SEM:inst.A
+HEX0[1] <= DEC_SEM:inst.B
+HEX0[2] <= DEC_SEM:inst.C
+HEX0[3] <= DEC_SEM:inst.D
+HEX0[4] <= DEC_SEM:inst.E
+HEX0[5] <= DEC_SEM:inst.F
+HEX0[6] <= DEC_SEM:inst.G
+SW[0] => DEC_SEM:inst.x0
+SW[1] => DEC_SEM:inst.x1
+SW[2] => DEC_SEM:inst.x2
+SW[3] => DEC_SEM:inst.x3
+
+
+|Lab1|DEC_SEM:inst
+A <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+x0 => inst2.IN0
+x0 => LPM_INV:inst.data[0]
+x0 => inst4.IN0
+x0 => inst5.IN0
+x0 => inst6.IN0
+x0 => inst10.IN0
+x0 => inst12.IN0
+x0 => inst17.IN0
+x0 => inst25.IN0
+x0 => inst23.IN0
+x0 => inst27.IN0
+x0 => inst29.IN0
+x0 => inst28.IN0
+x0 => inst33.IN0
+x1 => LPM_INV:inst.data[1]
+x1 => inst4.IN1
+x1 => inst9.IN1
+x1 => inst10.IN1
+x1 => inst14.IN1
+x1 => inst17.IN1
+x1 => inst30.IN0
+x1 => inst28.IN1
+x1 => inst33.IN1
+x1 => inst21.IN1
+x1 => inst19.IN0
+x2 => LPM_INV:inst.data[2]
+x2 => inst5.IN2
+x2 => inst3.IN2
+x2 => inst6.IN2
+x2 => inst9.IN2
+x2 => inst8.IN2
+x2 => inst17.IN2
+x2 => inst13.IN2
+x2 => inst24.IN1
+x2 => inst27.IN2
+x2 => inst33.IN2
+x2 => inst34.IN2
+x2 => inst20.IN2
+x2 => inst19.IN1
+x3 => LPM_INV:inst.data[3]
+x3 => inst4.IN3
+x3 => inst5.IN3
+x3 => inst10.IN3
+x3 => inst8.IN3
+x3 => inst14.IN3
+x3 => inst27.IN3
+x3 => inst34.IN3
+x3 => inst20.IN3
+x3 => inst19.IN2
+B <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+D <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+E <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+F <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+G <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+C <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab1|DEC_SEM:inst|LPM_INV:inst
+data[0] => result[0].IN0
+data[1] => result[1].IN0
+data[2] => result[2].IN0
+data[3] => result[3].IN0
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
