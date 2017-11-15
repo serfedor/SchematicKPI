@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Oct 21 20:53:26 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : Lab2_1
+Top-level Entity Name : Lab2_1
+Family : Cyclone IV GX
+Device : EP4CGX150DF31C7
+Timing Models : Final
+Total logic elements : 28 / 149,760 ( < 1 % )
+    Total combinational functions : 28 / 149,760 ( < 1 % )
+    Dedicated logic registers : 0 / 149,760 ( 0 % )
+Total registers : 0
+Total pins : 26 / 508 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 6,635,520 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 8 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 8 ( 0 % )
+Total PLLs : 0 / 8 ( 0 % )
