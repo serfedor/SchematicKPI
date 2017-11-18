@@ -1,0 +1,182 @@
+|Lab3_1
+LEDR[0] <= RS:inst0.Q
+clk => RS:inst0.C
+clk => RG:inst7.CLK
+SW[0] => mux8:inst4.sel[0]
+SW[1] => mux8:inst4.sel[1]
+SW[2] => mux8:inst4.sel[2]
+CLOCK2_50 => CLK_DIV:inst23.clock_25Mhz
+
+
+|Lab3_1|RS:inst0
+Q <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+R => inst8.IN0
+C => inst1.IN0
+S => inst11.IN0
+
+
+|Lab3_1|mux8:inst4
+data0 => sub_wire1[0].IN1
+data1 => sub_wire1[1].IN1
+data2 => sub_wire1[2].IN1
+data3 => sub_wire1[3].IN1
+data4 => sub_wire1[4].IN1
+data5 => sub_wire1[5].IN1
+data6 => sub_wire1[6].IN1
+data7 => sub_wire1[7].IN1
+sel[0] => sel[0].IN1
+sel[1] => sel[1].IN1
+sel[2] => sel[2].IN1
+result <= lpm_mux:LPM_MUX_component.result
+
+
+|Lab3_1|mux8:inst4|lpm_mux:LPM_MUX_component
+data[0][0] => mux_1kc:auto_generated.data[0]
+data[1][0] => mux_1kc:auto_generated.data[1]
+data[2][0] => mux_1kc:auto_generated.data[2]
+data[3][0] => mux_1kc:auto_generated.data[3]
+data[4][0] => mux_1kc:auto_generated.data[4]
+data[5][0] => mux_1kc:auto_generated.data[5]
+data[6][0] => mux_1kc:auto_generated.data[6]
+data[7][0] => mux_1kc:auto_generated.data[7]
+sel[0] => mux_1kc:auto_generated.sel[0]
+sel[1] => mux_1kc:auto_generated.sel[1]
+sel[2] => mux_1kc:auto_generated.sel[2]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_1kc:auto_generated.result[0]
+
+
+|Lab3_1|mux8:inst4|lpm_mux:LPM_MUX_component|mux_1kc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+data[2] => l1_w0_n1_mux_dataout.IN1
+data[3] => l1_w0_n1_mux_dataout.IN1
+data[4] => l1_w0_n2_mux_dataout.IN1
+data[5] => l1_w0_n2_mux_dataout.IN1
+data[6] => l1_w0_n3_mux_dataout.IN1
+data[7] => l1_w0_n3_mux_dataout.IN1
+result[0] <= l3_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w0_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w0_n2_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w0_n3_mux_dataout.IN0
+sel[0] => _.IN0
+sel[1] => l2_w0_n0_mux_dataout.IN0
+sel[1] => _.IN0
+sel[1] => l2_w0_n1_mux_dataout.IN0
+sel[1] => _.IN0
+sel[2] => l3_w0_n0_mux_dataout.IN0
+sel[2] => _.IN0
+
+
+|Lab3_1|RG:inst7
+OUT7 <= latch_:inst7.Q
+OUT6 <= latch_:inst6.Q
+OUT5 <= latch_:inst5.Q
+OUT4 <= latch_:inst4.Q
+OUT3 <= latch_:inst3.Q
+OUT2 <= latch_:inst2.Q
+OUT1 <= latch_:inst1.Q
+OUT0 <= latch_:inst.Q
+Data => latch_:inst.D
+CLK => latch_:inst.C
+CLK => latch_:inst1.C
+CLK => latch_:inst2.C
+CLK => latch_:inst3.C
+CLK => latch_:inst4.C
+CLK => latch_:inst5.C
+CLK => latch_:inst6.C
+CLK => latch_:inst7.C
+
+
+|Lab3_1|RG:inst7|latch_:inst7
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst6
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst5
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst4
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst3
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst2
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst1
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|RG:inst7|latch_:inst
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+
+|Lab3_1|clk_div:inst23
+clock_25Mhz => clock_1Hz~reg0.CLK
+clock_25Mhz => clock_10Hz~reg0.CLK
+clock_25Mhz => clock_100Hz~reg0.CLK
+clock_25Mhz => clock_1KHz~reg0.CLK
+clock_25Mhz => clock_10KHz~reg0.CLK
+clock_25Mhz => clock_100KHz~reg0.CLK
+clock_25Mhz => clock_1MHz~reg0.CLK
+clock_25Mhz => clock_1Mhz_int.CLK
+clock_25Mhz => count_1Mhz[0].CLK
+clock_25Mhz => count_1Mhz[1].CLK
+clock_25Mhz => count_1Mhz[2].CLK
+clock_25Mhz => count_1Mhz[3].CLK
+clock_25Mhz => count_1Mhz[4].CLK
+clock_1MHz <= clock_1MHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100KHz <= clock_100KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10KHz <= clock_10KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1KHz <= clock_1KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100Hz <= clock_100Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10Hz <= clock_10Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1Hz <= clock_1Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3_1|latch_:inst8
+Q <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D => inst.DATAIN
+C => inst12.IN0
+C => inst9.LATCH_ENABLE
+
+

@@ -1,0 +1,898 @@
+TimeQuest Timing Analyzer report for Lab3_1
+Fri Nov 17 15:16:19 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1100mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1100mV 85C Model Setup Summary
+  8. Slow 1100mV 85C Model Hold Summary
+  9. Slow 1100mV 85C Model Recovery Summary
+ 10. Slow 1100mV 85C Model Removal Summary
+ 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1100mV 85C Model Metastability Summary
+ 13. Slow 1100mV 0C Model Fmax Summary
+ 14. Slow 1100mV 0C Model Setup Summary
+ 15. Slow 1100mV 0C Model Hold Summary
+ 16. Slow 1100mV 0C Model Recovery Summary
+ 17. Slow 1100mV 0C Model Removal Summary
+ 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1100mV 0C Model Metastability Summary
+ 20. Fast 1100mV 85C Model Setup Summary
+ 21. Fast 1100mV 85C Model Hold Summary
+ 22. Fast 1100mV 85C Model Recovery Summary
+ 23. Fast 1100mV 85C Model Removal Summary
+ 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 25. Fast 1100mV 85C Model Metastability Summary
+ 26. Fast 1100mV 0C Model Setup Summary
+ 27. Fast 1100mV 0C Model Hold Summary
+ 28. Fast 1100mV 0C Model Recovery Summary
+ 29. Fast 1100mV 0C Model Removal Summary
+ 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 31. Fast 1100mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Lab3_1                                              ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CEBA4F23C7                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   3.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                           ;
++---------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------+
+; Clock Name                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                             ;
++---------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------+
+; clk_div:inst23|clock_1Hz        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_1Hz }        ;
+; clk_div:inst23|clock_1Khz_int   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_1Khz_int }   ;
+; clk_div:inst23|clock_1Mhz_int   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_1Mhz_int }   ;
+; clk_div:inst23|clock_10Hz_int   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_10Hz_int }   ;
+; clk_div:inst23|clock_10Khz_int  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_10Khz_int }  ;
+; clk_div:inst23|clock_100hz_int  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_100hz_int }  ;
+; clk_div:inst23|clock_100Khz_int ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:inst23|clock_100Khz_int } ;
+; CLOCK2_50                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK2_50 }                       ;
+; latch_:inst8|inst9              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { latch_:inst8|inst9 }              ;
++---------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                    ;
++------------+-----------------+---------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
++------------+-----------------+---------------------------------+------+
+; 255.23 MHz ; 255.23 MHz      ; latch_:inst8|inst9              ;      ;
+; 274.57 MHz ; 274.57 MHz      ; clk_div:inst23|clock_1Hz        ;      ;
+; 290.19 MHz ; 290.19 MHz      ; clk_div:inst23|clock_1Mhz_int   ;      ;
+; 306.18 MHz ; 306.18 MHz      ; clk_div:inst23|clock_1Khz_int   ;      ;
+; 347.71 MHz ; 347.71 MHz      ; clk_div:inst23|clock_100Khz_int ;      ;
+; 348.92 MHz ; 348.92 MHz      ; clk_div:inst23|clock_100hz_int  ;      ;
+; 350.51 MHz ; 350.51 MHz      ; clk_div:inst23|clock_10Khz_int  ;      ;
+; 388.5 MHz  ; 388.5 MHz       ; CLOCK2_50                       ;      ;
+; 396.98 MHz ; 396.98 MHz      ; clk_div:inst23|clock_10Hz_int   ;      ;
++------------+-----------------+---------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++----------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                      ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clk_div:inst23|clock_1Mhz_int   ; -2.446 ; -6.865        ;
+; CLOCK2_50                       ; -2.313 ; -8.033        ;
+; clk_div:inst23|clock_1Khz_int   ; -2.266 ; -9.096        ;
+; latch_:inst8|inst9              ; -2.082 ; -21.952       ;
+; clk_div:inst23|clock_100Khz_int ; -1.876 ; -8.663        ;
+; clk_div:inst23|clock_100hz_int  ; -1.866 ; -10.353       ;
+; clk_div:inst23|clock_10Khz_int  ; -1.853 ; -8.966        ;
+; clk_div:inst23|clock_1Hz        ; -1.794 ; -3.115        ;
+; clk_div:inst23|clock_10Hz_int   ; -1.519 ; -7.674        ;
++---------------------------------+--------+---------------+
+
+
++---------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                      ;
++---------------------------------+-------+---------------+
+; Clock                           ; Slack ; End Point TNS ;
++---------------------------------+-------+---------------+
+; clk_div:inst23|clock_10Khz_int  ; 0.273 ; 0.000         ;
+; clk_div:inst23|clock_100Khz_int ; 0.317 ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.441 ; 0.000         ;
+; CLOCK2_50                       ; 0.468 ; 0.000         ;
+; clk_div:inst23|clock_100hz_int  ; 0.536 ; 0.000         ;
+; latch_:inst8|inst9              ; 0.540 ; 0.000         ;
+; clk_div:inst23|clock_1Mhz_int   ; 0.572 ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.698 ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.879 ; 0.000         ;
++---------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1100mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1100mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary        ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; CLOCK2_50                       ; -0.538 ; -7.766        ;
+; clk_div:inst23|clock_100hz_int  ; -0.538 ; -5.387        ;
+; clk_div:inst23|clock_10Hz_int   ; -0.538 ; -4.759        ;
+; clk_div:inst23|clock_10Khz_int  ; -0.538 ; -4.746        ;
+; clk_div:inst23|clock_1Khz_int   ; -0.538 ; -4.726        ;
+; clk_div:inst23|clock_100Khz_int ; -0.538 ; -4.717        ;
+; clk_div:inst23|clock_1Mhz_int   ; -0.538 ; -4.143        ;
+; clk_div:inst23|clock_1Hz        ; 0.348  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.370  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                     ;
++------------+-----------------+---------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
++------------+-----------------+---------------------------------+------+
+; 255.49 MHz ; 255.49 MHz      ; latch_:inst8|inst9              ;      ;
+; 266.38 MHz ; 266.38 MHz      ; clk_div:inst23|clock_1Hz        ;      ;
+; 287.6 MHz  ; 287.6 MHz       ; clk_div:inst23|clock_1Mhz_int   ;      ;
+; 304.79 MHz ; 304.79 MHz      ; clk_div:inst23|clock_1Khz_int   ;      ;
+; 341.3 MHz  ; 341.3 MHz       ; clk_div:inst23|clock_100hz_int  ;      ;
+; 344.83 MHz ; 344.83 MHz      ; clk_div:inst23|clock_10Khz_int  ;      ;
+; 347.22 MHz ; 347.22 MHz      ; clk_div:inst23|clock_100Khz_int ;      ;
+; 367.24 MHz ; 367.24 MHz      ; CLOCK2_50                       ;      ;
+; 387.45 MHz ; 387.45 MHz      ; clk_div:inst23|clock_10Hz_int   ;      ;
++------------+-----------------+---------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                       ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clk_div:inst23|clock_1Mhz_int   ; -2.477 ; -7.049        ;
+; clk_div:inst23|clock_1Khz_int   ; -2.281 ; -9.317        ;
+; latch_:inst8|inst9              ; -2.214 ; -22.470       ;
+; CLOCK2_50                       ; -1.970 ; -8.363        ;
+; clk_div:inst23|clock_100hz_int  ; -1.930 ; -10.655       ;
+; clk_div:inst23|clock_10Khz_int  ; -1.900 ; -9.286        ;
+; clk_div:inst23|clock_100Khz_int ; -1.880 ; -8.853        ;
+; clk_div:inst23|clock_1Hz        ; -1.710 ; -3.087        ;
+; clk_div:inst23|clock_10Hz_int   ; -1.581 ; -7.669        ;
++---------------------------------+--------+---------------+
+
+
++---------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                       ;
++---------------------------------+-------+---------------+
+; Clock                           ; Slack ; End Point TNS ;
++---------------------------------+-------+---------------+
+; CLOCK2_50                       ; 0.124 ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.308 ; 0.000         ;
+; clk_div:inst23|clock_100Khz_int ; 0.371 ; 0.000         ;
+; clk_div:inst23|clock_10Khz_int  ; 0.400 ; 0.000         ;
+; latch_:inst8|inst9              ; 0.537 ; 0.000         ;
+; clk_div:inst23|clock_100hz_int  ; 0.637 ; 0.000         ;
+; clk_div:inst23|clock_1Mhz_int   ; 0.645 ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.733 ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.829 ; 0.000         ;
++---------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary         ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; CLOCK2_50                       ; -0.538 ; -7.874        ;
+; clk_div:inst23|clock_100hz_int  ; -0.538 ; -5.405        ;
+; clk_div:inst23|clock_10Hz_int   ; -0.538 ; -4.730        ;
+; clk_div:inst23|clock_10Khz_int  ; -0.538 ; -4.701        ;
+; clk_div:inst23|clock_100Khz_int ; -0.538 ; -4.674        ;
+; clk_div:inst23|clock_1Khz_int   ; -0.538 ; -4.674        ;
+; clk_div:inst23|clock_1Mhz_int   ; -0.538 ; -4.252        ;
+; clk_div:inst23|clock_1Hz        ; 0.326  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.334  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                      ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; CLOCK2_50                       ; -1.328 ; -2.107        ;
+; clk_div:inst23|clock_1Mhz_int   ; -1.290 ; -2.503        ;
+; clk_div:inst23|clock_1Khz_int   ; -1.049 ; -2.823        ;
+; clk_div:inst23|clock_100Khz_int ; -0.852 ; -2.583        ;
+; clk_div:inst23|clock_100hz_int  ; -0.768 ; -3.115        ;
+; clk_div:inst23|clock_1Hz        ; -0.725 ; -0.975        ;
+; clk_div:inst23|clock_10Khz_int  ; -0.679 ; -2.580        ;
+; latch_:inst8|inst9              ; -0.450 ; -4.557        ;
+; clk_div:inst23|clock_10Hz_int   ; -0.411 ; -2.071        ;
++---------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                       ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clk_div:inst23|clock_10Khz_int  ; -0.131 ; -0.131        ;
+; clk_div:inst23|clock_100Khz_int ; -0.025 ; -0.025        ;
+; clk_div:inst23|clock_100hz_int  ; -0.020 ; -0.020        ;
+; clk_div:inst23|clock_1Mhz_int   ; 0.067  ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.160  ; 0.000         ;
+; CLOCK2_50                       ; 0.186  ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.283  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.368  ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.371  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+------------------------------------------
+; Fast 1100mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1100mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary        ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; CLOCK2_50                       ; -0.297 ; -1.114        ;
+; clk_div:inst23|clock_1Mhz_int   ; -0.135 ; -0.539        ;
+; clk_div:inst23|clock_100hz_int  ; 0.127  ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.137  ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.139  ; 0.000         ;
+; clk_div:inst23|clock_10Khz_int  ; 0.139  ; 0.000         ;
+; clk_div:inst23|clock_100Khz_int ; 0.148  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.421  ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.458  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                       ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clk_div:inst23|clock_1Mhz_int   ; -1.224 ; -2.246        ;
+; clk_div:inst23|clock_1Khz_int   ; -0.971 ; -2.470        ;
+; CLOCK2_50                       ; -0.903 ; -1.610        ;
+; clk_div:inst23|clock_100Khz_int ; -0.783 ; -2.252        ;
+; clk_div:inst23|clock_100hz_int  ; -0.728 ; -2.715        ;
+; clk_div:inst23|clock_10Khz_int  ; -0.646 ; -2.243        ;
+; clk_div:inst23|clock_1Hz        ; -0.592 ; -0.791        ;
+; latch_:inst8|inst9              ; -0.367 ; -3.661        ;
+; clk_div:inst23|clock_10Hz_int   ; -0.352 ; -1.673        ;
++---------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                        ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clk_div:inst23|clock_10Khz_int  ; -0.124 ; -0.124        ;
+; CLOCK2_50                       ; -0.049 ; -0.049        ;
+; clk_div:inst23|clock_100Khz_int ; -0.043 ; -0.043        ;
+; clk_div:inst23|clock_100hz_int  ; -0.023 ; -0.023        ;
+; clk_div:inst23|clock_1Mhz_int   ; 0.077  ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.117  ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.224  ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.317  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.324  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary         ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; CLOCK2_50                       ; -0.291 ; -1.142        ;
+; clk_div:inst23|clock_1Mhz_int   ; -0.104 ; -0.415        ;
+; clk_div:inst23|clock_100hz_int  ; 0.128  ; 0.000         ;
+; clk_div:inst23|clock_10Khz_int  ; 0.140  ; 0.000         ;
+; clk_div:inst23|clock_1Khz_int   ; 0.142  ; 0.000         ;
+; clk_div:inst23|clock_10Hz_int   ; 0.146  ; 0.000         ;
+; clk_div:inst23|clock_100Khz_int ; 0.154  ; 0.000         ;
+; latch_:inst8|inst9              ; 0.433  ; 0.000         ;
+; clk_div:inst23|clock_1Hz        ; 0.456  ; 0.000         ;
++---------------------------------+--------+---------------+
+
+
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                            ;
++----------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                 ; -2.477  ; -0.131 ; N/A      ; N/A     ; -0.538              ;
+;  CLOCK2_50                       ; -2.313  ; -0.049 ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_100Khz_int ; -1.880  ; -0.043 ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_100hz_int  ; -1.930  ; -0.023 ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_10Hz_int   ; -1.581  ; 0.317  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_10Khz_int  ; -1.900  ; -0.131 ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_1Hz        ; -1.794  ; 0.224  ; N/A      ; N/A     ; 0.326               ;
+;  clk_div:inst23|clock_1Khz_int   ; -2.281  ; 0.117  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst23|clock_1Mhz_int   ; -2.477  ; 0.067  ; N/A      ; N/A     ; -0.538              ;
+;  latch_:inst8|inst9              ; -2.214  ; 0.324  ; N/A      ; N/A     ; 0.334               ;
+; Design-wide TNS                  ; -86.749 ; -0.239 ; 0.0      ; 0.0     ; -36.31              ;
+;  CLOCK2_50                       ; -8.363  ; -0.049 ; N/A      ; N/A     ; -7.874              ;
+;  clk_div:inst23|clock_100Khz_int ; -8.853  ; -0.043 ; N/A      ; N/A     ; -4.717              ;
+;  clk_div:inst23|clock_100hz_int  ; -10.655 ; -0.023 ; N/A      ; N/A     ; -5.405              ;
+;  clk_div:inst23|clock_10Hz_int   ; -7.674  ; 0.000  ; N/A      ; N/A     ; -4.759              ;
+;  clk_div:inst23|clock_10Khz_int  ; -9.286  ; -0.131 ; N/A      ; N/A     ; -4.746              ;
+;  clk_div:inst23|clock_1Hz        ; -3.115  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  clk_div:inst23|clock_1Khz_int   ; -9.317  ; 0.000  ; N/A      ; N/A     ; -4.726              ;
+;  clk_div:inst23|clock_1Mhz_int   ; -7.049  ; 0.000  ; N/A      ; N/A     ; -4.252              ;
+;  latch_:inst8|inst9              ; -22.470 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
++----------------------------------+---------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                              ;
++---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin     ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDR[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++--------------------------------------------------------------+
+; Input Transition Times                                       ;
++-----------+--------------+-----------------+-----------------+
+; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-----------+--------------+-----------------+-----------------+
+; SW[2]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK2_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[0]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-----------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin     ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
++---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                               ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+; clk_div:inst23|clock_1Hz        ; clk_div:inst23|clock_1Hz        ; 0        ; 0        ; 1        ; 0        ;
+; latch_:inst8|inst9              ; clk_div:inst23|clock_1Hz        ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Khz_int   ; clk_div:inst23|clock_1Khz_int   ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_100hz_int  ; clk_div:inst23|clock_1Khz_int   ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Mhz_int   ; clk_div:inst23|clock_1Mhz_int   ; 11       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_100Khz_int ; clk_div:inst23|clock_1Mhz_int   ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; clk_div:inst23|clock_10Hz_int   ; 17       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Khz_int   ; clk_div:inst23|clock_10Khz_int  ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Khz_int  ; clk_div:inst23|clock_10Khz_int  ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; clk_div:inst23|clock_100hz_int  ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_100hz_int  ; clk_div:inst23|clock_100hz_int  ; 19       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Khz_int  ; clk_div:inst23|clock_100Khz_int ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_100Khz_int ; clk_div:inst23|clock_100Khz_int ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; CLOCK2_50                       ; 1        ; 0        ; 0        ; 0        ;
+; CLOCK2_50                       ; CLOCK2_50                       ; 40       ; 0        ; 0        ; 0        ;
+; latch_:inst8|inst9              ; latch_:inst8|inst9              ; 0        ; 8        ; 8        ; 8        ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+; clk_div:inst23|clock_1Hz        ; clk_div:inst23|clock_1Hz        ; 0        ; 0        ; 1        ; 0        ;
+; latch_:inst8|inst9              ; clk_div:inst23|clock_1Hz        ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Khz_int   ; clk_div:inst23|clock_1Khz_int   ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_100hz_int  ; clk_div:inst23|clock_1Khz_int   ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Mhz_int   ; clk_div:inst23|clock_1Mhz_int   ; 11       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_100Khz_int ; clk_div:inst23|clock_1Mhz_int   ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; clk_div:inst23|clock_10Hz_int   ; 17       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_1Khz_int   ; clk_div:inst23|clock_10Khz_int  ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Khz_int  ; clk_div:inst23|clock_10Khz_int  ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; clk_div:inst23|clock_100hz_int  ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_100hz_int  ; clk_div:inst23|clock_100hz_int  ; 19       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Khz_int  ; clk_div:inst23|clock_100Khz_int ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:inst23|clock_100Khz_int ; clk_div:inst23|clock_100Khz_int ; 16       ; 0        ; 0        ; 0        ;
+; clk_div:inst23|clock_10Hz_int   ; CLOCK2_50                       ; 1        ; 0        ; 0        ; 0        ;
+; CLOCK2_50                       ; CLOCK2_50                       ; 40       ; 0        ; 0        ; 0        ;
+; latch_:inst8|inst9              ; latch_:inst8|inst9              ; 0        ; 8        ; 8        ; 8        ;
++---------------------------------+---------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 3     ; 3    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                   ;
++---------------------------------+---------------------------------+------+-------------+
+; Target                          ; Clock                           ; Type ; Status      ;
++---------------------------------+---------------------------------+------+-------------+
+; CLOCK2_50                       ; CLOCK2_50                       ; Base ; Constrained ;
+; clk_div:inst23|clock_1Hz        ; clk_div:inst23|clock_1Hz        ; Base ; Constrained ;
+; clk_div:inst23|clock_1Khz_int   ; clk_div:inst23|clock_1Khz_int   ; Base ; Constrained ;
+; clk_div:inst23|clock_1Mhz_int   ; clk_div:inst23|clock_1Mhz_int   ; Base ; Constrained ;
+; clk_div:inst23|clock_10Hz_int   ; clk_div:inst23|clock_10Hz_int   ; Base ; Constrained ;
+; clk_div:inst23|clock_10Khz_int  ; clk_div:inst23|clock_10Khz_int  ; Base ; Constrained ;
+; clk_div:inst23|clock_100Khz_int ; clk_div:inst23|clock_100Khz_int ; Base ; Constrained ;
+; clk_div:inst23|clock_100hz_int  ; clk_div:inst23|clock_100hz_int  ; Base ; Constrained ;
+; latch_:inst8|inst9              ; latch_:inst8|inst9              ; Base ; Constrained ;
++---------------------------------+---------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Nov 17 15:16:08 2017
+Info: Command: quartus_sta Lab3_1 -c Lab3_1
+Info: qsta_default_script.tcl version: #1
+Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 19 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab3_1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name latch_:inst8|inst9 latch_:inst8|inst9
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_1Hz clk_div:inst23|clock_1Hz
+    Info (332105): create_clock -period 1.000 -name CLOCK2_50 CLOCK2_50
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_10Hz_int clk_div:inst23|clock_10Hz_int
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_100hz_int clk_div:inst23|clock_100hz_int
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_1Khz_int clk_div:inst23|clock_1Khz_int
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_10Khz_int clk_div:inst23|clock_10Khz_int
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_100Khz_int clk_div:inst23|clock_100Khz_int
+    Info (332105): create_clock -period 1.000 -name clk_div:inst23|clock_1Mhz_int clk_div:inst23|clock_1Mhz_int
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.446
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.446              -6.865 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):    -2.313              -8.033 CLOCK2_50 
+    Info (332119):    -2.266              -9.096 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -2.082             -21.952 latch_:inst8|inst9 
+    Info (332119):    -1.876              -8.663 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -1.866             -10.353 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -1.853              -8.966 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -1.794              -3.115 clk_div:inst23|clock_1Hz 
+    Info (332119):    -1.519              -7.674 clk_div:inst23|clock_10Hz_int 
+Info (332146): Worst-case hold slack is 0.273
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.273               0.000 clk_div:inst23|clock_10Khz_int 
+    Info (332119):     0.317               0.000 clk_div:inst23|clock_100Khz_int 
+    Info (332119):     0.441               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.468               0.000 CLOCK2_50 
+    Info (332119):     0.536               0.000 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.540               0.000 latch_:inst8|inst9 
+    Info (332119):     0.572               0.000 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.698               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.879               0.000 clk_div:inst23|clock_10Hz_int 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.538
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.538              -7.766 CLOCK2_50 
+    Info (332119):    -0.538              -5.387 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -0.538              -4.759 clk_div:inst23|clock_10Hz_int 
+    Info (332119):    -0.538              -4.746 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.538              -4.726 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -0.538              -4.717 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.538              -4.143 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.348               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.370               0.000 latch_:inst8|inst9 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.477
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.477              -7.049 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):    -2.281              -9.317 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -2.214             -22.470 latch_:inst8|inst9 
+    Info (332119):    -1.970              -8.363 CLOCK2_50 
+    Info (332119):    -1.930             -10.655 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -1.900              -9.286 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -1.880              -8.853 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -1.710              -3.087 clk_div:inst23|clock_1Hz 
+    Info (332119):    -1.581              -7.669 clk_div:inst23|clock_10Hz_int 
+Info (332146): Worst-case hold slack is 0.124
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.124               0.000 CLOCK2_50 
+    Info (332119):     0.308               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.371               0.000 clk_div:inst23|clock_100Khz_int 
+    Info (332119):     0.400               0.000 clk_div:inst23|clock_10Khz_int 
+    Info (332119):     0.537               0.000 latch_:inst8|inst9 
+    Info (332119):     0.637               0.000 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.645               0.000 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.733               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.829               0.000 clk_div:inst23|clock_10Hz_int 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.538
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.538              -7.874 CLOCK2_50 
+    Info (332119):    -0.538              -5.405 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -0.538              -4.730 clk_div:inst23|clock_10Hz_int 
+    Info (332119):    -0.538              -4.701 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.538              -4.674 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.538              -4.674 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -0.538              -4.252 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.326               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.334               0.000 latch_:inst8|inst9 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.328
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.328              -2.107 CLOCK2_50 
+    Info (332119):    -1.290              -2.503 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):    -1.049              -2.823 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -0.852              -2.583 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.768              -3.115 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -0.725              -0.975 clk_div:inst23|clock_1Hz 
+    Info (332119):    -0.679              -2.580 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.450              -4.557 latch_:inst8|inst9 
+    Info (332119):    -0.411              -2.071 clk_div:inst23|clock_10Hz_int 
+Info (332146): Worst-case hold slack is -0.131
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.131              -0.131 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.025              -0.025 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.020              -0.020 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.067               0.000 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.160               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.186               0.000 CLOCK2_50 
+    Info (332119):     0.283               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.368               0.000 latch_:inst8|inst9 
+    Info (332119):     0.371               0.000 clk_div:inst23|clock_10Hz_int 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.297
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.297              -1.114 CLOCK2_50 
+    Info (332119):    -0.135              -0.539 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.127               0.000 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.137               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.139               0.000 clk_div:inst23|clock_10Hz_int 
+    Info (332119):     0.139               0.000 clk_div:inst23|clock_10Khz_int 
+    Info (332119):     0.148               0.000 clk_div:inst23|clock_100Khz_int 
+    Info (332119):     0.421               0.000 latch_:inst8|inst9 
+    Info (332119):     0.458               0.000 clk_div:inst23|clock_1Hz 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.224
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.224              -2.246 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):    -0.971              -2.470 clk_div:inst23|clock_1Khz_int 
+    Info (332119):    -0.903              -1.610 CLOCK2_50 
+    Info (332119):    -0.783              -2.252 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.728              -2.715 clk_div:inst23|clock_100hz_int 
+    Info (332119):    -0.646              -2.243 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.592              -0.791 clk_div:inst23|clock_1Hz 
+    Info (332119):    -0.367              -3.661 latch_:inst8|inst9 
+    Info (332119):    -0.352              -1.673 clk_div:inst23|clock_10Hz_int 
+Info (332146): Worst-case hold slack is -0.124
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.124              -0.124 clk_div:inst23|clock_10Khz_int 
+    Info (332119):    -0.049              -0.049 CLOCK2_50 
+    Info (332119):    -0.043              -0.043 clk_div:inst23|clock_100Khz_int 
+    Info (332119):    -0.023              -0.023 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.077               0.000 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.117               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.224               0.000 clk_div:inst23|clock_1Hz 
+    Info (332119):     0.317               0.000 clk_div:inst23|clock_10Hz_int 
+    Info (332119):     0.324               0.000 latch_:inst8|inst9 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -0.291
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.291              -1.142 CLOCK2_50 
+    Info (332119):    -0.104              -0.415 clk_div:inst23|clock_1Mhz_int 
+    Info (332119):     0.128               0.000 clk_div:inst23|clock_100hz_int 
+    Info (332119):     0.140               0.000 clk_div:inst23|clock_10Khz_int 
+    Info (332119):     0.142               0.000 clk_div:inst23|clock_1Khz_int 
+    Info (332119):     0.146               0.000 clk_div:inst23|clock_10Hz_int 
+    Info (332119):     0.154               0.000 clk_div:inst23|clock_100Khz_int 
+    Info (332119):     0.433               0.000 latch_:inst8|inst9 
+    Info (332119):     0.456               0.000 clk_div:inst23|clock_1Hz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 928 megabytes
+    Info: Processing ended: Fri Nov 17 15:16:19 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:07
+
+
