@@ -1,5 +1,5 @@
 Flow report for Lab3_2
-Sat Nov 18 21:42:53 2017
+Sun Nov 19 18:02:54 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Nov 18 21:42:53 2017       ;
+; Flow Status                     ; Successful - Sun Nov 19 18:02:54 2017       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab3_2                                      ;
 ; Top-level Entity Name           ; Lab3_2                                      ;
@@ -49,7 +49,7 @@ agreement for further details.
 ; Device                          ; 5CEBA2F17C8                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 928                                         ;
+; Total registers                 ; 0                                           ;
 ; Total pins                      ; 113                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/18/2017 21:10:16 ;
+; Start date & time ; 11/19/2017 17:51:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3_2              ;
 +-------------------+---------------------+
@@ -79,13 +79,15 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220295157938207.151103221602256        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 220295157938207.151110666911396        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; DEC32.bsf                              ; --            ; --          ; --         ;
 ; MISC_FILE                           ; DEC32_bb.v                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mux32.bsf                              ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mux32_bb.v                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; mux2.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mux2_bb.v                              ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -98,16 +100,16 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:54     ; 1.0                     ; 722 MB              ; 00:01:10                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 600 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 605 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 601 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 605 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 601 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 605 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 601 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 605 MB              ; 00:00:01                           ;
-; Total                ; 00:01:02     ; --                      ; --                  ; 00:01:18                           ;
+; Analysis & Synthesis ; 00:01:32     ; 1.0                     ; 771 MB              ; 00:01:52                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 615 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 634 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 626 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 634 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 626 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 634 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 626 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 634 MB              ; 00:00:02                           ;
+; Total                ; 00:01:42     ; --                      ; --                  ; 00:02:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -134,11 +136,11 @@ agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off Lab3_2 -c Lab3_2
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/ Lab3_2 -c Lab3_2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform1.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/ Lab3_2 -c Lab3_2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform1.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/ Lab3_2 -c Lab3_2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Lab3_2 -c Lab3_2 --vector_source=D:/QuartusLab/Lab3/Lab3_2/Waveform1.vwf --testbench_file=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/QuartusLab/Lab3/Lab3_2/simulation/qsim/ Lab3_2 -c Lab3_2
 
 

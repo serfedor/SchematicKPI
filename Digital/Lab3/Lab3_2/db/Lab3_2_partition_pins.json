@@ -300,11 +300,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "BUS_W[31]",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "RW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RW[0]",
 					"strict" : false
 				},
 				{
@@ -316,19 +324,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "RW[0]",
-					"strict" : false
-				},
-				{
 					"name" : "WE",
 					"strict" : false
 				},
 				{
-					"name" : "RW[4]",
-					"strict" : false
-				},
-				{
-					"name" : "RW[3]",
+					"name" : "BUS_W[31]",
 					"strict" : false
 				},
 				{

@@ -49,12 +49,19 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name BDF_FILE Lab3_2.bdf
+set_global_assignment -name QIP_FILE DEC32.qip
+set_global_assignment -name QIP_FILE mux32.qip
+set_global_assignment -name BDF_FILE ff.bdf
+set_global_assignment -name QIP_FILE mux2.qip
+set_global_assignment -name BDF_FILE ff_en.bdf
+set_global_assignment -name BDF_FILE ff8.bdf
+set_global_assignment -name BDF_FILE reg32_en32.bdf
+set_global_assignment -name BDF_FILE ff8_en32_0.bdf
+set_global_assignment -name BDF_FILE ff71_en32.bdf
+set_global_assignment -name BDF_FILE ff8_0.bdf
+set_global_assignment -name BDF_FILE ff_en32_0.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name QIP_FILE DEC32.qip
-set_global_assignment -name SYSTEMVERILOG_FILE reg32.sv
-set_global_assignment -name QIP_FILE mux32.qip
-set_global_assignment -name SYSTEMVERILOG_FILE reg32_32.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
