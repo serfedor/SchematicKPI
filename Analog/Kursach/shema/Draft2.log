@@ -1,0 +1,192 @@
+Circuit: * C:\Users\Serlonic\Documents\GitHub\SchematicKPI\Kursach\shema\Draft2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 9.80797e-006
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 9.58204e-006
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 10.0379%
+vernier = 0.00390625
+Source Step = 10.0349%
+Source Step = 10.0645%
+Source Step = 10.0941%
+Source Step = 10.1237%
+Source Step = 10.1533%
+Source Step = 10.1829%
+Source Step = 10.2125%
+Source Step = 10.2421%
+Source Step = 10.2717%
+vernier = 0.00146484
+Source Step = 10.3131%
+Source Step = 10.3575%
+Source Step = 10.4019%
+Source Step = 10.4463%
+Source Step = 10.4906%
+vernier = 0.00219727
+Source Step = 10.5506%
+Source Step = 10.6172%
+Source Step = 10.6837%
+Source Step = 10.7503%
+Source Step = 10.8169%
+vernier = 0.0032959
+Source Step = 10.9035%
+Source Step = 11.0033%
+Source Step = 11.1032%
+Source Step = 11.2031%
+Source Step = 11.303%
+vernier = 0.00494385
+Source Step = 11.4278%
+Source Step = 11.5776%
+Source Step = 11.7274%
+Source Step = 11.8773%
+Source Step = 12.0271%
+vernier = 0.00741577
+Source Step = 12.2068%
+Source Step = 12.4316%
+Source Step = 12.6563%
+Source Step = 12.881%
+Source Step = 13.1057%
+vernier = 0.0111237
+Source Step = 13.3642%
+Source Step = 13.7012%
+Source Step = 14.0383%
+Source Step = 14.3754%
+Source Step = 14.7125%
+vernier = 0.0166855
+Source Step = 15.0833%
+Source Step = 15.5889%
+Source Step = 16.0945%
+Source Step = 16.6001%
+Source Step = 17.1057%
+vernier = 0.0250282
+Source Step = 17.6367%
+Source Step = 18.3951%
+Source Step = 19.1535%
+Source Step = 19.9119%
+Source Step = 20.6704%
+Source Step = 21.4288%
+vernier = 0.0375423
+Source Step = 22.5665%
+Source Step = 23.7041%
+Source Step = 24.8417%
+Source Step = 25.9794%
+Source Step = 27.117%
+vernier = 0.0563135
+Source Step = 28.7666%
+Source Step = 30.4731%
+Source Step = 32.1796%
+Source Step = 33.886%
+Source Step = 35.5925%
+vernier = 0.0844703
+Source Step = 37.9816%
+Source Step = 40.5413%
+Source Step = 43.101%
+Source Step = 45.6607%
+Source Step = 48.2204%
+vernier = 0.126705
+Source Step = 51.676%
+Source Step = 55.5155%
+Source Step = 59.3551%
+Source Step = 63.1947%
+Source Step = 67.0342%
+vernier = 0.190058
+Source Step = 72.0256%
+Source Step = 77.785%
+Source Step = 83.5443%
+Source Step = 89.3037%
+Source Step = 90.5005%
+Source Step = 90.5905%
+Source Step = 90.6805%
+Source Step = 90.7705%
+Source Step = 90.8605%
+Source Step = 90.9505%
+Source Step = 91.0405%
+Source Step = 91.1304%
+Source Step = 91.2204%
+Source Step = 91.3104%
+Source Step = 91.4004%
+Source Step = 91.4904%
+Source Step = 91.5804%
+Source Step = 91.6704%
+Source stepping aborted.
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source Step = 96.9815%
+Source Step = 97.0111%
+Source Step = 97.0407%
+Source Step = 97.0703%
+Source Step = 97.0999%
+Source Step = 97.1295%
+Source Step = 97.1591%
+Source Step = 97.1887%
+Source Step = 97.2183%
+Source Step = 97.2479%
+Source Step = 97.2775%
+Source Step = 97.3071%
+Source Step = 97.3366%
+Source Step = 97.3662%
+Source Step = 97.3958%
+Source Step = 97.4254%
+Source Step = 97.455%
+Source Step = 97.4846%
+Source Step = 97.5142%
+Source Step = 97.5438%
+Source Step = 97.5734%
+Source Step = 97.603%
+Source Step = 97.6326%
+Source Step = 97.6622%
+Source Step = 97.6918%
+Source stepping aborted.
+Pseudo Transient failed in finding the operating point.
+Trouble finding operating point....skipping operating point for Transient analysis.
+Changing Tseed to 9.76562e-009
+Changing Tseed to 9.76563e-011
+Changing Tseed to 9.76562e-008
+Changing Tseed to 9.76562e-012
+Changing Tseed to 9.76563e-007
+Changing Tseed to 9.76562e-013
+
+Date: Wed May 10 22:57:03 2017
+Total elapsed time: 22.881 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1123782
+traniter = 1057380
+tranpoints = 332614
+accept = 241464
+rejected = 95264
+matrix size = 40
+fillins = 39
+solver = Normal
+Matrix Compiler1: 2.95 KB object code size  0.9/0.4/[0.2]
+Matrix Compiler2: 3.59 KB object code size  2.1/4.8/[2.1]
+
+

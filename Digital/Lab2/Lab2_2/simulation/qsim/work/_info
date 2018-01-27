@@ -1,0 +1,128 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/QuartusLab/Lab2/Lab2_2/simulation/qsim
+vLab2_2
+Z1 !s110 1510145145
+!i10b 1
+!s100 M2`R=XJlXhg0N?A[o^QGb2
+IZLadQik>][034P^LT9L>h1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1510145138
+8Lab2_2.vo
+FLab2_2.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1510145144.000000
+!s107 Lab2_2.vo|
+!s90 -work|work|Lab2_2.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@lab2_2
+Elab2_2
+Z6 w1507629056
+Z7 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 cD3@N^MdoDolN5@R6?T[V1
+Z8 DPx8 cyclonev 19 cyclonev_components 0 22 3BCIeZzdIHLCX<;R;K38G3
+Z9 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 PQDYM9fR]Wek<A7X8bA8S1
+Z10 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z11 DPx6 altera 11 dffeas_pack 0 22 >EJOc2K4@P4f?njWHdOcd0
+Z12 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z15 DPx6 altera 28 altera_primitives_components 0 22 14j`ZKHCzSI;]V?hmAE6_1
+R0
+Z16 8Lab2_2.vho
+Z17 FLab2_2.vho
+l0
+L39
+V?22C0NK70G?ADiThhDgZ]3
+!s100 0cPX_1n^_eN;IP@gcfO?[3
+Z18 OV;C;10.5b;63
+32
+Z19 !s110 1507629057
+!i10b 1
+Z20 !s108 1507629057.000000
+Z21 !s90 -work|work|Lab2_2.vho|
+Z22 !s107 Lab2_2.vho|
+!i113 1
+R4
+Z23 tExplicit 1 CvgOpt 0
+Astructure
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+DEx4 work 6 lab2_2 0 22 ?22C0NK70G?ADiThhDgZ]3
+l1474
+L152
+VNCgYmDC0R>Nf7f4[=I>mk1
+!s100 oU3YZS?48<U3N5U0DQ2_`3
+R18
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R4
+R23
+Elab2_2_vhd_vec_tst
+w1507629054
+R13
+R14
+R0
+8Waveform.vwf.vht
+FWaveform.vwf.vht
+l0
+L32
+V?mQYObWB[W[J4j3NIP02O2
+!s100 ZFQe_zLZIPaB0d8fnZHho3
+R18
+32
+!s110 1507629058
+!i10b 1
+!s108 1507629058.000000
+!s90 -work|work|Waveform.vwf.vht|
+!s107 Waveform.vwf.vht|
+!i113 1
+R4
+R23
+vLab2_2_vlg_vec_tst
+R1
+!i10b 1
+!s100 Fl>f]jmKCY[QAjJLnd`6R1
+I[D89UZ:BPg7JeS6Vl3O3z2
+R2
+R0
+w1510145136
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1510145145.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R4
+R5
+n@lab2_2_vlg_vec_tst

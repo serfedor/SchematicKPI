@@ -1,0 +1,116 @@
+|Lab1_1
+OUT[0] <= MUX:inst.Out
+OUT[1] <= MUX:inst5.Out
+OUT[2] <= MUX:inst1.Out
+OUT[3] <= MUX:inst7.Out
+OUT[4] <= MUX:inst2.Out
+OUT[5] <= MUX:inst8.Out
+OUT[6] <= MUX:inst3.Out
+OUT[7] <= MUX:inst9.Out
+S => inst4.IN0
+S => MUX:inst9.selB
+S => MUX:inst3.selB
+S => MUX:inst2.selB
+S => MUX:inst1.selB
+S => MUX:inst.selB
+S => MUX:inst5.selB
+S => MUX:inst7.selB
+S => MUX:inst8.selB
+InputA[0] => MUX:inst.a
+InputA[1] => MUX:inst5.a
+InputA[2] => MUX:inst1.a
+InputA[3] => MUX:inst7.a
+InputA[4] => MUX:inst2.a
+InputA[5] => MUX:inst8.a
+InputA[6] => MUX:inst3.a
+InputA[7] => MUX:inst9.a
+InputB[0] => MUX:inst.b
+InputB[1] => MUX:inst5.b
+InputB[2] => MUX:inst1.b
+InputB[3] => MUX:inst7.b
+InputB[4] => MUX:inst2.b
+InputB[5] => MUX:inst8.b
+InputB[6] => MUX:inst3.b
+InputB[7] => MUX:inst9.b
+E => MUX:inst9.E
+E => MUX:inst3.E
+E => MUX:inst2.E
+E => MUX:inst1.E
+E => MUX:inst.E
+E => MUX:inst5.E
+E => MUX:inst7.E
+E => MUX:inst8.E
+
+
+|Lab1_1|MUX:inst9
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst3
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst2
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst1
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst5
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst7
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+
+|Lab1_1|MUX:inst8
+Out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst1.IN0
+selB => inst1.IN1
+a => inst.IN0
+selA => inst.IN1
+E => inst5.IN1
+
+

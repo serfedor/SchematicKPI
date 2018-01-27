@@ -1,0 +1,458 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/21/2017 11:42:58"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Lab2_2
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab2_2_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Change;
+reg [31:0] InputA;
+reg [31:0] InputB;
+reg [1:0] LogOp;
+reg [1:0] selectOP;
+reg [1:0] ShiftOp;
+reg SLL;
+// wires                                               
+wire [31:0] OUT;
+wire zero;
+
+// assign statements (if any)                          
+Lab2_2 i1 (
+// port map - connection between master ports and signals/registers   
+	.Change(Change),
+	.InputA(InputA),
+	.InputB(InputB),
+	.LogOp(LogOp),
+	.OUT(OUT),
+	.selectOP(selectOP),
+	.ShiftOp(ShiftOp),
+	.SLL(SLL),
+	.zero(zero)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// selectOP[ 1 ]
+initial
+begin
+	selectOP[1] = 1'b0;
+end 
+// selectOP[ 0 ]
+initial
+begin
+	selectOP[0] = 1'b0;
+end 
+// LogOp[ 1 ]
+initial
+begin
+	LogOp[1] = 1'b0;
+	LogOp[1] = #150000 1'b1;
+	LogOp[1] = #150000 1'b0;
+end 
+// LogOp[ 0 ]
+initial
+begin
+	LogOp[0] = 1'b0;
+	LogOp[0] = #70000 1'b1;
+	LogOp[0] = #80000 1'b0;
+	LogOp[0] = #80000 1'b1;
+	LogOp[0] = #70000 1'b0;
+end 
+// InputA[ 31 ]
+initial
+begin
+	InputA[31] = 1'b0;
+end 
+// InputA[ 30 ]
+initial
+begin
+	InputA[30] = 1'b1;
+	InputA[30] = #290000 1'b0;
+	InputA[30] = #190000 1'b1;
+end 
+// InputA[ 29 ]
+initial
+begin
+	InputA[29] = 1'b1;
+	InputA[29] = #290000 1'b0;
+	InputA[29] = #190000 1'b1;
+end 
+// InputA[ 28 ]
+initial
+begin
+	InputA[28] = 1'b1;
+	InputA[28] = #290000 1'b0;
+	InputA[28] = #190000 1'b1;
+end 
+// InputA[ 27 ]
+initial
+begin
+	InputA[27] = 1'b0;
+end 
+// InputA[ 26 ]
+initial
+begin
+	InputA[26] = 1'b0;
+end 
+// InputA[ 25 ]
+initial
+begin
+	InputA[25] = 1'b0;
+end 
+// InputA[ 24 ]
+initial
+begin
+	InputA[24] = 1'b0;
+end 
+// InputA[ 23 ]
+initial
+begin
+	InputA[23] = 1'b0;
+end 
+// InputA[ 22 ]
+initial
+begin
+	InputA[22] = 1'b1;
+	InputA[22] = #290000 1'b0;
+	InputA[22] = #190000 1'b1;
+end 
+// InputA[ 21 ]
+initial
+begin
+	InputA[21] = 1'b0;
+end 
+// InputA[ 20 ]
+initial
+begin
+	InputA[20] = 1'b0;
+end 
+// InputA[ 19 ]
+initial
+begin
+	InputA[19] = 1'b1;
+	InputA[19] = #290000 1'b0;
+	InputA[19] = #190000 1'b1;
+end 
+// InputA[ 18 ]
+initial
+begin
+	InputA[18] = 1'b1;
+	InputA[18] = #290000 1'b0;
+	InputA[18] = #190000 1'b1;
+end 
+// InputA[ 17 ]
+initial
+begin
+	InputA[17] = 1'b1;
+	InputA[17] = #290000 1'b0;
+	InputA[17] = #190000 1'b1;
+end 
+// InputA[ 16 ]
+initial
+begin
+	InputA[16] = 1'b1;
+	InputA[16] = #290000 1'b0;
+	InputA[16] = #190000 1'b1;
+end 
+// InputA[ 15 ]
+initial
+begin
+	InputA[15] = 1'b0;
+end 
+// InputA[ 14 ]
+initial
+begin
+	InputA[14] = 1'b0;
+end 
+// InputA[ 13 ]
+initial
+begin
+	InputA[13] = 1'b0;
+end 
+// InputA[ 12 ]
+initial
+begin
+	InputA[12] = 1'b0;
+end 
+// InputA[ 11 ]
+initial
+begin
+	InputA[11] = 1'b0;
+end 
+// InputA[ 10 ]
+initial
+begin
+	InputA[10] = 1'b0;
+end 
+// InputA[ 9 ]
+initial
+begin
+	InputA[9] = 1'b0;
+end 
+// InputA[ 8 ]
+initial
+begin
+	InputA[8] = 1'b0;
+end 
+// InputA[ 7 ]
+initial
+begin
+	InputA[7] = 1'b1;
+	InputA[7] = #290000 1'b0;
+	InputA[7] = #190000 1'b1;
+end 
+// InputA[ 6 ]
+initial
+begin
+	InputA[6] = 1'b0;
+end 
+// InputA[ 5 ]
+initial
+begin
+	InputA[5] = 1'b0;
+end 
+// InputA[ 4 ]
+initial
+begin
+	InputA[4] = 1'b0;
+end 
+// InputA[ 3 ]
+initial
+begin
+	InputA[3] = 1'b0;
+end 
+// InputA[ 2 ]
+initial
+begin
+	InputA[2] = 1'b0;
+end 
+// InputA[ 1 ]
+initial
+begin
+	InputA[1] = 1'b0;
+end 
+// InputA[ 0 ]
+initial
+begin
+	InputA[0] = 1'b1;
+	InputA[0] = #290000 1'b0;
+	InputA[0] = #190000 1'b1;
+end 
+// InputB[ 31 ]
+initial
+begin
+	InputB[31] = 1'b0;
+end 
+// InputB[ 30 ]
+initial
+begin
+	InputB[30] = 1'b0;
+end 
+// InputB[ 29 ]
+initial
+begin
+	InputB[29] = 1'b1;
+	InputB[29] = #290000 1'b0;
+	InputB[29] = #190000 1'b1;
+end 
+// InputB[ 28 ]
+initial
+begin
+	InputB[28] = 1'b1;
+	InputB[28] = #290000 1'b0;
+	InputB[28] = #190000 1'b1;
+end 
+// InputB[ 27 ]
+initial
+begin
+	InputB[27] = 1'b1;
+	InputB[27] = #290000 1'b0;
+	InputB[27] = #190000 1'b1;
+end 
+// InputB[ 26 ]
+initial
+begin
+	InputB[26] = 1'b1;
+	InputB[26] = #290000 1'b0;
+	InputB[26] = #190000 1'b1;
+end 
+// InputB[ 25 ]
+initial
+begin
+	InputB[25] = 1'b1;
+	InputB[25] = #290000 1'b0;
+	InputB[25] = #190000 1'b1;
+end 
+// InputB[ 24 ]
+initial
+begin
+	InputB[24] = 1'b1;
+	InputB[24] = #290000 1'b0;
+	InputB[24] = #190000 1'b1;
+end 
+// InputB[ 23 ]
+initial
+begin
+	InputB[23] = 1'b1;
+	InputB[23] = #290000 1'b0;
+	InputB[23] = #190000 1'b1;
+end 
+// InputB[ 22 ]
+initial
+begin
+	InputB[22] = 1'b1;
+	InputB[22] = #290000 1'b0;
+	InputB[22] = #190000 1'b1;
+end 
+// InputB[ 21 ]
+initial
+begin
+	InputB[21] = 1'b1;
+	InputB[21] = #290000 1'b0;
+	InputB[21] = #190000 1'b1;
+end 
+// InputB[ 20 ]
+initial
+begin
+	InputB[20] = 1'b0;
+end 
+// InputB[ 19 ]
+initial
+begin
+	InputB[19] = 1'b0;
+end 
+// InputB[ 18 ]
+initial
+begin
+	InputB[18] = 1'b0;
+end 
+// InputB[ 17 ]
+initial
+begin
+	InputB[17] = 1'b0;
+end 
+// InputB[ 16 ]
+initial
+begin
+	InputB[16] = 1'b0;
+end 
+// InputB[ 15 ]
+initial
+begin
+	InputB[15] = 1'b0;
+end 
+// InputB[ 14 ]
+initial
+begin
+	InputB[14] = 1'b0;
+end 
+// InputB[ 13 ]
+initial
+begin
+	InputB[13] = 1'b0;
+end 
+// InputB[ 12 ]
+initial
+begin
+	InputB[12] = 1'b0;
+end 
+// InputB[ 11 ]
+initial
+begin
+	InputB[11] = 1'b0;
+end 
+// InputB[ 10 ]
+initial
+begin
+	InputB[10] = 1'b0;
+end 
+// InputB[ 9 ]
+initial
+begin
+	InputB[9] = 1'b0;
+end 
+// InputB[ 8 ]
+initial
+begin
+	InputB[8] = 1'b0;
+end 
+// InputB[ 7 ]
+initial
+begin
+	InputB[7] = 1'b0;
+end 
+// InputB[ 6 ]
+initial
+begin
+	InputB[6] = 1'b0;
+end 
+// InputB[ 5 ]
+initial
+begin
+	InputB[5] = 1'b1;
+	InputB[5] = #290000 1'b0;
+	InputB[5] = #190000 1'b1;
+end 
+// InputB[ 4 ]
+initial
+begin
+	InputB[4] = 1'b1;
+	InputB[4] = #290000 1'b0;
+	InputB[4] = #190000 1'b1;
+end 
+// InputB[ 3 ]
+initial
+begin
+	InputB[3] = 1'b1;
+	InputB[3] = #290000 1'b0;
+	InputB[3] = #190000 1'b1;
+end 
+// InputB[ 2 ]
+initial
+begin
+	InputB[2] = 1'b1;
+	InputB[2] = #290000 1'b0;
+	InputB[2] = #190000 1'b1;
+end 
+// InputB[ 1 ]
+initial
+begin
+	InputB[1] = 1'b1;
+	InputB[1] = #290000 1'b0;
+	InputB[1] = #190000 1'b1;
+end 
+// InputB[ 0 ]
+initial
+begin
+	InputB[0] = 1'b1;
+	InputB[0] = #290000 1'b0;
+	InputB[0] = #190000 1'b1;
+end 
+endmodule
+

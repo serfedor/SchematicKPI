@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/serlonic/QuartusLab/Lab2/Lab2/simulation/qsim
+vhard_block
+Z0 !s110 1508752053
+!i10b 1
+!s100 PdS_JIzEG@RR7mW;?aPE22
+Ia;K;<7?XZPcN]^19h:Ydh0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/QuartusLab/Lab2/Lab2/simulation/qsim
+Z3 w1508752052
+Z4 8Lab2_1.vo
+Z5 FLab2_1.vo
+L0 929
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1508752053.000000
+Z8 !s107 Lab2_1.vo|
+Z9 !s90 -work|work|Lab2_1.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vLab2_1
+R0
+!i10b 1
+!s100 OVV14cb::J=S7?Aj72ILa2
+IO<cnJm^T1JDY_bMMMMGEz2
+R1
+R2
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@lab2_1
+vLab2_1_vlg_vec_tst
+R0
+!i10b 1
+!s100 TgK7eF6[Ab4@MDOAPl]TN2
+II^eJ9Gk<0PzNIHBKm0Eoj0
+R1
+R2
+w1508752051
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11
+n@lab2_1_vlg_vec_tst

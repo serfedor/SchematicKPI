@@ -1,0 +1,25 @@
+
+
+D:/QuartusLab/Lab2/Lab2_2/add_sub.v
+
+Oct 10 12PM:53:09>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+add_sub.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
+
+D:/QuartusLab/Lab2/Lab2_2/add_sub.v
+
+Oct 10 06PM:35:10>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+add_sub.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
